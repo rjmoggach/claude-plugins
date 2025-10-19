@@ -11,19 +11,20 @@
     },
     "plugins": [
         {
-            "name": "spec-workflow",
-            "source": "./plugins/spec-workflow",
+            "name": "spec",
+            "source": "./plugins/spec",
             "description": "Complete spec-driven development workflow for creating product feature specifications with automated validation and orchestration",
             "version": "1.0.0",
             "author": {
                 "name": "Rob Moggach",
                 "url": "https://github.com/rjmoggach"
             },
-            "homepage": "https://github.com/rjmoggach/claude-plugins/tree/main/plugins/spec-workflow",
+            "homepage": "https://github.com/rjmoggach/claude-plugins/tree/main/plugins/spec",
             "repository": "https://github.com/rjmoggach/claude-plugins",
             "license": "MIT",
             "keywords": [
                 "spec-workflow",
+                "spec",
                 "requirements",
                 "design",
                 "tasks",
@@ -34,20 +35,15 @@
                 "product-specs"
             ],
             "category": "productivity",
-            "commands": [
-                "./commands/spec-create.md",
-                "./commands/spec-validate.md"
-            ],
+            "commands": ["./commands/create.md", "./commands/validate.md"],
             "agents": [
                 "./agents/spec-orchestrator.md",
                 "./agents/requirements-validator.md",
                 "./agents/design-validator.md",
                 "./agents/tasks-validator.md"
             ],
-            "skills": [
-                "./skills/spec-workflow"
-            ],
-            "strict": true
+            "skills": ["./skills/spec-workflow"],
+            "strict": false
         }
     ]
 }
