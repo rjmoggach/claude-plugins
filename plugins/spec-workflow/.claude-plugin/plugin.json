@@ -1,0 +1,73 @@
+{
+  "name": "spec-workflow",
+  "version": "1.0.0",
+  "description": "Complete spec-driven development workflow for creating product feature specifications with automated validation",
+  "author": "Your Name",
+  "type": "workflow",
+  "components": {
+    "agents": [
+      {
+        "name": "spec-orchestrator",
+        "file": "agents/spec-orchestrator.md",
+        "description": "Orchestrates the complete spec creation workflow"
+      },
+      {
+        "name": "spec-requirements-validator",
+        "file": "agents/requirements-validator.md",
+        "description": "Validates requirements documents"
+      },
+      {
+        "name": "spec-design-validator",
+        "file": "agents/design-validator.md",
+        "description": "Validates design documents"
+      },
+      {
+        "name": "spec-tasks-validator",
+        "file": "agents/tasks-validator.md",
+        "description": "Validates task breakdown documents"
+      }
+    ],
+    "commands": [
+      {
+        "name": "spec-create",
+        "file": "commands/spec-create.md",
+        "description": "Create a complete product feature specification"
+      },
+      {
+        "name": "spec-validate",
+        "file": "commands/spec-validate.md",
+        "description": "Validate existing specification documents"
+      }
+    ],
+    "skills": [
+      {
+        "name": "spec-workflow",
+        "directory": "skills/spec-workflow",
+        "description": "Complete spec-driven development workflow with templates and validators"
+      }
+    ]
+  },
+  "installation": {
+    "requirements": [
+      "Claude Code CLI",
+      "Bash (macOS/Linux) or PowerShell (Windows)"
+    ],
+    "setup": [
+      "Copy plugin to .claude/plugins/ directory",
+      "Templates will be used from plugin templates/ directory",
+      "Scripts are automatically available to agents"
+    ]
+  },
+  "usage": {
+    "primary": "use spec workflow to create [feature-name]",
+    "commands": [
+      "/spec-create [feature-name]",
+      "/spec-validate [path-to-document]"
+    ],
+    "workflows": [
+      "Create new specification: Triggers orchestrator to generate requirements, design, and tasks",
+      "Validate existing document: Uses appropriate validator agent",
+      "Iterate on feedback: Validators provide actionable improvement suggestions"
+    ]
+  }
+}
